@@ -10,7 +10,7 @@
 | `created_at`   | `timestamp`          | Laravel default                          |
 | `updated_at`   | `timestamp`          | Laravel default                          |
 
-
+<?php
 Schema::create('order_list', function (Blueprint $table) {
     $table->id();
     $table->foreignId('order_id')->constrained('orders')->onDelete('cascade');
@@ -21,3 +21,4 @@ Schema::create('order_list', function (Blueprint $table) {
     $table->decimal('total', 10, 2);
     $table->timestamps();
 });
+php?>

@@ -10,6 +10,7 @@
 | `created_at`   | `timestamp`          | Laravel default                          |
 | `updated_at`   | `timestamp`          | Laravel default                          |
 
+
 Schema::create('order_list', function (Blueprint $table) {
     $table->id();
     $table->foreignId('order_id')->constrained('orders')->onDelete('cascade');
